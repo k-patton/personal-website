@@ -1,96 +1,41 @@
-// Gatsby supports TypeScript natively!
 import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import "./index.scss"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-
-type Data = {
-  site: {
-    siteMetadata: {
-      title: string
-    }
-  }
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string
-        frontmatter: {
-          title: string
-          date: string
-          description: string
-        }
-        fields: {
-          slug: string
-        }
-      }
-    }[]
-  }
-}
-
-const BlogIndex = ({ data, location }: PageProps<Data>) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
-
+export default function Home() {
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
+    <div className="homepage">
+      <div className="section-a">
+        <div className="image-container"></div>
+        <div className="content-container">
+          <nav>
+            <a href="/"> Katherine Patton </a>
+            <a> Resume </a> <a> Projects </a> <a> Blog </a>
+          </nav>
+          <div className="greeting">
+            <h1> Hi, I'm Katie. </h1>
+            <h3>
+              I'm a full stack
+              <span id="software">
+                software engineer
+                <span id="cursor"> | </span>
+              </span>
+            </h3>
+            <div className="checkout">
+              <p>
+                Check out my <a> experience </a>
+              </p>
+              <p>
+                Check out some <a> projects I've worked on </a>
+              </p>
+              <p>
+                And here's some stuff that's <a> just for fun </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="section-b">Lorem ipsum</div>
+      <div className="section-c">Lorem ipsum</div>
+    </div>
   )
 }
-
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
