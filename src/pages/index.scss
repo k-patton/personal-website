@@ -1,12 +1,28 @@
+$main-color: #d2e4c4;
+// $main-color: #ecf5e6;
+// $main-color: #f7fdf2;
+
 .homepage {
+  font-family: "Montserrat", sans-serif;
+
+  h1 {
+    font-weight: 900;
+  }
+
+  h3,
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
   .section-a {
     display: flex;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   a {
-    font-family: "consolas";
+    font-family: "consolas", sans-serif;
     color: black;
   }
   a:hover {
@@ -37,9 +53,7 @@
   .content-container {
     width: 50%;
 
-    // background-color: #ecf5e6;
-    // background-color: #d2e4c4;
-    background-color: #f7fdf2;
+    background-color: $main-color;
 
     display: flex;
     align-items: center;
@@ -49,7 +63,7 @@
       display: flex;
       justify-content: flex-end;
       padding: 1rem;
-      position: fixed;
+      position: absolute;
       right: 0;
       top: 0;
       width: 100%;
@@ -68,6 +82,10 @@
       vertical-align: middle;
       font-family: "Montserrat", sans-serif;
 
+      &-myname {
+        margin-bottom: 4rem;
+      }
+
       .checkout {
         margin-top: 4rem;
         p {
@@ -84,14 +102,9 @@
       }
 
       h1 {
-        border-bottom: solid 1px #357b6c;
+        // border-bottom: solid 1px #b8d8d8;
         display: inline;
-      }
-
-      h3,
-      h2 {
         font-family: "Montserrat", sans-serif;
-        font-weight: 400;
       }
     }
   }
@@ -116,12 +129,129 @@
   }
 }
 
+.section-a {
+  .scroll {
+    position: absolute;
+    bottom: 0;
+
+    #down-chevron {
+      g {
+        fill: black;
+      }
+    }
+  }
+}
 .section-b {
   // background-color: #b8d8d8;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-c {
   background-color: #b8d8d8;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.experience {
+  text-align: center;
+
+  h2 {
+    margin: 2rem 0;
+    text-decoration: underline solid $main-color;
+  }
+
+  .experience-bubble {
+    background-color: $main-color;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin: 2rem;
+
+    transition: 0.3s;
+
+    h3 {
+      font-family: "consolas", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 2rem;
+      text-align: left;
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  .experience-bubble:hover {
+    margin: 2rem 1rem;
+    // padding: 2rem 3rem;
+  }
+}
+
+.fun {
+  text-align: center;
+  padding-bottom: 3rem;
+  h2 {
+    padding: 2rem 0rem;
+    text-decoration: underline solid currentColor;
+  }
+
+  .food-photo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+
+    img {
+      width: 80%;
+      transition: 0.3s;
+    }
+
+    img:hover {
+      width: 90%;
+    }
+  }
+
+  // .food-photo:hover {
+  //   margin: 1rem;
+  // }
+}
+
+@media all and (max-width: 736px) {
+  .greeting {
+    position: absolute;
+    left: 2rem;
+    top: 4rem;
+
+    &-myname {
+      margin-bottom: 2rem !important;
+    }
+  }
+
+  .image-container {
+    width: 100% !important;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.473),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("/me.jpg") !important;
+  }
+
+  .content-container {
+    display: none;
+    width: 0 !important;
+  }
+
+  .checkout {
+    margin-top: 2rem !important;
+  }
 }

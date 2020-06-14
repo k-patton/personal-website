@@ -57,13 +57,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Katherine Patton`,
+        short_name: `KP`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `public/icons/kp.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -74,6 +74,10 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {},
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
