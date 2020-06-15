@@ -164,6 +164,14 @@ export default function Home() {
             <h3> Tzatziki </h3>
             <img src="/tzatziki.jpg" alt="tzatziki" />
           </div>
+          <div className="food-photo">
+            <h3> Sweet n Sour Chicken</h3>
+            <img src="/sweetsourchicken.jpg" alt="sweet and sour chicken" />
+          </div>
+          <div className="food-photo">
+            <h3> Paneer and Broccoli</h3>
+            <img src="paneer-broccoli.jpg" alt="paneer and broccoli" />
+          </div>
         </div>
       </div>
     </div>
