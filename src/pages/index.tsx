@@ -1,6 +1,5 @@
 import React from "react"
 import "./index.scss"
-import DownArrow from "../../static/down-chevron.svg"
 import SEO from "../components/seo"
 import { ResumeCard } from "../components/resumeCard/resumeCard"
 
@@ -13,7 +12,7 @@ export default function Home() {
         <div className="content-container">
           <nav className="d-none d-md-flex">
             <a href="/"> Katherine Patton </a>
-            <a> Resume </a> <a> Projects </a> <a> Blog </a>
+            <a href="#resume"> Resume </a> <a> Projects </a> <a> Blog </a>
           </nav>
           <div className="greeting">
             <div className="greeting-myname">
@@ -46,7 +45,7 @@ export default function Home() {
         </div>
       </div>
       <div className="section-b container">
-        <div className="experience">
+        <div className="experience" id="resume">
           <h2> Experience </h2>
 
           {/* componetize? */}

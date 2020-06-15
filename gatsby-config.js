@@ -78,6 +78,14 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {},
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "katherinepatton.com",
+        protocol: "https",
+        hostname: "www.katherinepatton.com",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
