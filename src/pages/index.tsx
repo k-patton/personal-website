@@ -12,7 +12,9 @@ export default function Home() {
         <div className="content-container">
           <nav className="d-none d-md-flex">
             <a href="/"> Katherine Patton </a>
-            <a href="#resume"> Resume </a> <a> Projects </a> <a> Blog </a>
+            <a href="#resume"> Resume </a>
+            <a href="https://github.com/k-patton"> Projects </a>
+            <a href="#blog"> Blog </a>
           </nav>
           <div className="greeting">
             <div className="greeting-myname">
@@ -31,13 +33,16 @@ export default function Home() {
             </div>
             <div className="checkout">
               <p>
-                Check out my <a> experience </a>
+                Check out my <a href="#resume"> experience </a>
               </p>
               <p>
-                Check out some <a> projects I've worked on </a>
+                Check out some{" "}
+                <a href="https://github.com/k-patton">
+                  projects I've worked on
+                </a>
               </p>
               <p>
-                And here's some stuff that's <a> just for fun </a>
+                And here's some stuff that's <a href="#blog"> just for fun </a>
               </p>
             </div>
           </div>
@@ -54,8 +59,7 @@ export default function Home() {
             <div className="d-flex justify-content-between">
               <div className="title"> Dual BA Program </div>
               <div className="d-none d-md-block title">
-                {" "}
-                September 2014 - May 2019{" "}
+                September 2014 - May 2019
               </div>
             </div>
             <div className="d-flex justify-content-between">
@@ -98,7 +102,7 @@ export default function Home() {
               ]}
             />
             <ResumeCard
-              company={"Code Ninjas"}
+              company="Code Ninjas"
               city="Charlotte, NC"
               title="Instructor (Code Sensei)"
               dates="March 2020 – Present"
@@ -107,11 +111,46 @@ export default function Home() {
                 "Developed a Website Builder curriculum that teaches kids the basics of HTML, CSS, and Javascript and guides them through creating their own personal websites. ",
               ]}
             />
+
+            <ResumeCard
+              company="Columbia Spectator Publishing Company"
+              city="New York, NY"
+              title="Developer- Web Applications"
+              dates="February 2018 – May 2019"
+              bulletPoints={[
+                "Collaborated with 15 developers within Spectator’s tech team to convert a housing application from Ruby to React. The application is used by a third of Columbia students during the housing lottery.",
+                "Created a chrome extension using JavaScript and HTML to improve an existing student class registration tool; the extension displays total class enrollment and fixes a calendar export bug",
+              ]}
+            />
+
+            <ResumeCard
+              company="Scholastic"
+              city="New York, NY"
+              title="Software Engineering Intern"
+              dates="June 2018 - August 2018"
+              bulletPoints={[
+                "Designed and implemented a micro-service tracer and log aggregator using Java and Opentracing; project was launched to production clarifying context propagation and drastically reducing incidence resolution time",
+                "Engaged in agile/scrum practices; followed a project through an entire life cycle.",
+                "Worked with Spring MVC, AWS, JavaFX, and a variety of logging tools.",
+              ]}
+            />
+
+            <ResumeCard
+              company="Zuckerman Institute of Mind, Brain, and Behavior"
+              city="New York, NY"
+              title="Research Assistant- Virology Core"
+              dates="June 2017 - January 2018"
+              bulletPoints={[
+                "Produced viral neuronal tracers, essential tools used in neuroscience research and nervous system mapping, for Columbia University, other academic institutions, and scientific corporations",
+                "Rebuilt and managed a detailed Virology Core database describing over 300 products and their productions status",
+                "Performed molecular biology techniques and assisted in tissue culture, harvesting rabies, and harvesting AAVS",
+              ]}
+            />
           </div>
         </div>
       </div>
       <div className="section-c">
-        <div className="fun container">
+        <div className="fun container" id="blog">
           <h2> Just for fun </h2>
           <p>
             I'm working on starting a food blog where I cook dishes from around
