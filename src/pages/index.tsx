@@ -21,13 +21,13 @@ export default function Home() {
               <h1> Hi, I'm Katie. </h1>
             </div>
             <h3>
-              I'm a full stack
+              <div> I'm a full stack</div>
               <span id="software">
                 software engineer
                 <span id="cursor">|</span>
               </span>
             </h3>
-            <div className="m-3">
+            <div className="warning">
               [Quick heads up, this site is a work in progress. Please forgive
               any weird behaviors or blank pages!]
             </div>
@@ -37,9 +37,7 @@ export default function Home() {
               </p>
               <p>
                 Check out some{" "}
-                <a href="https://github.com/k-patton">
-                  projects I've worked on
-                </a>
+                <a href="https://github.com/k-patton">of my projects</a>
               </p>
               <p>
                 And here's some stuff that's <a href="#blog"> just for fun </a>
