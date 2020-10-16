@@ -256,7 +256,7 @@ $black: #101010;
   // }
 }
 
-@media all and (max-width: 736px) {
+@media (max-width: 736px) {
   nav {
     a {
       color: black;
@@ -296,5 +296,16 @@ $black: #101010;
 
   .checkout {
     margin-top: 2rem !important;
+  }
+
+  .experience {
+    .experience-bubble {
+      padding: 1rem;
+      margin: 2rem 1rem;
+    }
+
+    .experience-bubble:hover {
+      margin: 2rem 0.5rem;
+    }
   }
 }
