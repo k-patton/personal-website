@@ -20,8 +20,14 @@ export default function Home() {
             >
               Resume
             </a>
-            <a href="https://github.com/k-patton"> Github </a>
-            <a href="https://www.linkedin.com/in/katherine-patton-9601/">
+            <a href="https://github.com/k-patton" target="_blank">
+              {" "}
+              Github{" "}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/katherine-patton-9601/"
+              target="_blank"
+            >
               Linkedin
             </a>
           </nav>
@@ -43,17 +49,25 @@ export default function Home() {
             <div className="checkout">
               <p>
                 Check out my{" "}
-                <a href="https://s3.amazonaws.com/katherinepatton.com/Resume.pdf">
+                <a
+                  href="https://s3.amazonaws.com/katherinepatton.com/Resume.pdf"
+                  target="_blank"
+                >
                   experience
                 </a>
               </p>
               <p>
                 Check out some of{" "}
-                <a href="https://github.com/k-patton">my projects</a>
+                <a href="https://github.com/k-patton" target="_blank">
+                  my projects
+                </a>
               </p>
               <p>
                 And here's some stuff that's{" "}
-                <a href="https://repl.it/@kpatton"> just for fun </a>
+                <a href="https://repl.it/@kpatton" target="_blank">
+                  {" "}
+                  just for fun{" "}
+                </a>
               </p>
             </div>
           </div>
