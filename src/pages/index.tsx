@@ -14,7 +14,10 @@ export default function Home() {
             <a id="logo" href="/">
               Katherine Patton
             </a>
-            <a href="resume.pdf" target="_blank">
+            <a
+              href="https://s3.amazonaws.com/katherinepatton.com/Resume.pdf"
+              target="_blank"
+            >
               Resume
             </a>
             <a href="https://github.com/k-patton"> Github </a>
@@ -39,11 +42,14 @@ export default function Home() {
             </div>
             <div className="checkout">
               <p>
-                Check out my <a href="#resume"> experience </a>
+                Check out my{" "}
+                <a href="https://s3.amazonaws.com/katherinepatton.com/Resume.pdf">
+                  experience
+                </a>
               </p>
               <p>
-                Check out some{" "}
-                <a href="https://github.com/k-patton">of my projects</a>
+                Check out some of{" "}
+                <a href="https://github.com/k-patton">my projects</a>
               </p>
               <p>
                 And here's some stuff that's{" "}
